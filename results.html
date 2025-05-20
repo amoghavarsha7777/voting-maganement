@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results - Voting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Voting Results</h2>
+    <div id="results">Loading results...</div>
+    <script>
+      fetch('php/results.php')
+        .then(res => res.json())
+        .then(data => {
+          const resultsDiv = document.getElementById('results');
+          resultsDiv.innerHTML = '';
+          data.forEach(candidate => {
+            resultsDiv.innerHTML += `<p>${candidate.name}: ${candidate.votes} votes</p>`;
+          });
+        });
+    </script>
+  </div>
+</body>
+</html>

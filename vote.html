@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vote - Voting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Cast Your Vote</h2>
+    <form action="insert_vote.php" method="POST">
+      <input type="hidden" name="user_id" value="1">
+      <input type="hidden" name="username" value="john_doe">
+      <input type="hidden" name="position_id" value="1">
+
+      <label><input type="radio" name="candidate_id" value="1" required> Candidate 1</label><br>
+      <label><input type="radio" name="candidate_id" value="2"> Candidate 2</label><br>
+      <label><input type="radio" name="candidate_id" value="3"> Candidate 3</label><br>
+
+      <button type="submit">Submit Vote</button>
+    </form>
+
+    <a href="results.html">View Results</a>
+  </div>
+</body>
+</html>
