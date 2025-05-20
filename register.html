@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Register - Voting System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Register - Karnataka Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Roboto&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-  <div class="container">
-    <h2>Register</h2>
-    <form action="php/register.php" method="POST">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <input type="hidden" name="role" value="voter">  <!-- Add this -->
+  <div class="auth-wrapper">
+    <form action="php/register.php" method="POST" class="auth-form">
+      <h2>Create Your Account</h2>
+      <input type="text" name="username" placeholder="Username" required autocomplete="username" />
+      <input type="password" name="password" placeholder="Password" required autocomplete="new-password" />
+      <input type="hidden" name="role" value="voter" />
       <button type="submit">Register</button>
+      <p class="bottom-text">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
     </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
   </div>
 </body>
 </html>
